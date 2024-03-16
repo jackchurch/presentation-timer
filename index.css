@@ -16,3 +16,11 @@ body {
 .countDownText {
 	font-size: 30em;
 }
+
+header {
+	margin: 2em;
+}
+
+#userForm {
+	margin: 2em 3em;
+}

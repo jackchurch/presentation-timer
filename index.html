@@ -6,19 +6,24 @@
 		<title>Presentation Timer</title>
 	</head>
 	<body id="body">
+		<header id="header">
+			<h1>Presentation Timer</h1>
+		</header>
 		<form id="userForm" name="userForm" onsubmit="return validateForm()">
+			<br>
 			<h3>Presentation time:</h3>
 			<label>Hours:</label>
 			<input id="runTimeHours" type="number" name="runTimeHours" value="1" min="0">
 			<label>Minutes:</label>
 			<input id="runTimeMinutes" type="number" name="runTimeMinutes" value="0" max="59" min="0">
+			<br><br><br><br>
 			<h3>Warning at remaining time:</h3>
 			<h4>Leave at '0' if not required</h4>
 			<label>Hours:</label>
 			<input id="warningHours" type="number" name="warningHours" value="0" min="0">
 			<label>Minutes:</label>
 			<input id="warningMinutes" type="number" name="warningMinutes" value="15" max="59" min="0">
-			<br><br><br>
+			<br><br><br><br>
 			<button type="submit">Submit</button>
 		</form>
 		<div  class="countDownDiv">

@@ -9,9 +9,11 @@ function validateForm()
 	var	warningTimeTotal = warningHours * 60 + warningMinutes;
 	var	form = document.getElementById("userForm");
 	var warningRequired = true;
+	var	header = document.getElementById("header");
 	if (warningTimeTotal >= runTimeTotal)
 		warningRequired = false;
 	form.outerHTML = ("");
+	header.outerHTML = ("");
 	beginTimer(body, runTimeTotal, warningTimeTotal, warningRequired);
 	return (false);
 }
