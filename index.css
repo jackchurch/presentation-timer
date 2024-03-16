@@ -1,0 +1,18 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+.countDownDiv {
+	word-wrap: break-word;
+	margin: auto;
+	width: 95%;
+	padding: 10px;
+	height: 100vh;
+	text-align: center;
+	font-size: 30em;
+}
+
+.countDownText {
+	font-size: 30em;
+}
