@@ -37,7 +37,7 @@ function	beginTimer(body, runTimeTotal, warningTimeTotal, warningRequired)
 	displayMinutes = correctNumber(displayMinutes);
 	countdownText.innerHTML = (displayHours + " : " + displayMinutes);
 	runTimeTotal--;
-	setTimeout(beginTimer, 10000, body, runTimeTotal, warningTimeTotal, warningRequired);
+	setTimeout(beginTimer, 60000, body, runTimeTotal, warningTimeTotal, warningRequired);
 }
 
 function	setColours(runTimeTotal, countdownText, body, warningTimeTotal, warningRequired)
