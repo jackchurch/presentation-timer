@@ -1,26 +1,47 @@
 body {
 	background-color: black;
 	color: white;
+
+}
+
+#warningToHideSection {
+	display: none;
 }
 
 .countDownDiv {
-	word-wrap: break-word;
-	margin: auto;
-	width: 95%;
-	padding: 10px;
-	height: 100vh;
 	text-align: center;
-	font-size: 30em;
+	line-height: 1px;
 }
 
-.countDownText {
-	font-size: 30em;
+.outter-div {
+	width: 100%;
+	text-align: center;
+}
+
+.centre-aligned-div {
+	display: inline-block;
+	text-align: left;
 }
 
 header {
-	margin: 2em;
+	font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Georgia, serif;
+	font-size: 1.5em;
+}
+h3 {
+	font-family: Verdana, system-ui, Helvetica, sans-serif;
+	font-size: 1.3em;
 }
 
-#userForm {
-	margin: 2em 3em;
+p {
+	font-family: Verdana, system-ui, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.number-box {
+	max-width: 3.5em;
+	margin-left: 0.5em;
+}
+
+.not-first-label {
+	margin-left: 2em;
 }
