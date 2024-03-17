@@ -25,7 +25,6 @@ function	beginTimer(body, runTimeTotal, warningTimeTotal, warningRequired)
 	var	displayHours = 0;
 	var	countdownText = document.getElementById("countdownText");
 
-	countdownText.style.fontSize = "30em";
 	displayTime = runTimeTotal;
 	if (displayTime < 0) {
 		displayTime = displayTime * -1;

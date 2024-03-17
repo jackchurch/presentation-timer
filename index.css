@@ -25,16 +25,16 @@ body {
 
 header {
 	font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Georgia, serif;
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 h3 {
 	font-family: Verdana, system-ui, Helvetica, sans-serif;
-	font-size: 1.3em;
+	font-size: 1.5em;
 }
 
 p {
 	font-family: Verdana, system-ui, Helvetica, sans-serif;
-	font-size: 1em;
+	font-size: 1.2em;
 }
 
 .number-box {
@@ -44,4 +44,19 @@ p {
 
 .not-first-label {
 	margin-left: 2em;
+}
+
+#countdownText {
+	font-family: Calibri, Helvetica, 'Segoe UI', Serif, system-ui;
+	font-size: 30em;
+}
+
+label {
+	font-size: 1.2em;
+}
+
+button {
+	font-size: 1em;
+	padding: 0.2em 0.4em;
+	font-family: Verdana, system-ui, Helvetica, sans-serif;
 }
