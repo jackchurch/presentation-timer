@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="presentaion-timer.css" />
+		<link rel="stylesheet" type="text/css" href="pt/presentaion-timer.css" />
 		<title>Presentation Timer</title>
 	</head>
 	<body id="body" onload="showHideWarningInputs()">
@@ -25,13 +25,13 @@
 							<label class="not-first-label">Minutes:<input id="warningMinutes" class="number-box" type="number" name="warningMinutes" value="15" max="59" min="0"></label>
 						</secion>
 						<br><br><br><br>
-						<button type="submit">Begin Timer</button>
+						<button id="submitButton" "type="submit">Begin Timer</button>
 					</form>
 				</div>
 				<div  class="countDownDiv">
 					<p id="countdownText"></p>
 				</div>
-				<script src="presentaion-timer.js"></script>
+				<script src="pt/presentaion-timer.js"></script>
 			</div>
 		</div>
 		<button id="backButton" onclick="reload()">Back</button>
