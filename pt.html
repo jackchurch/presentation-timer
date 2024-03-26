@@ -21,7 +21,7 @@
 						<label><input type="checkbox" id="warningCheckBox" value="false" onclick="showHideWarningInputs()"/> Set a warning when the timer nears the end.</label>
 						<secion id="warningToHideSection">
 							<h3 id="warningHeader">Warning at remaining time:</h3>
-							<label>Hours:<input id="warningHours" class="number-box" ype="number" name="warningHours" value="0" min="0"></label>
+							<label>Hours:<input id="warningHours" class="number-box" type="number" name="warningHours" value="0" min="0"></label>
 							<label class="not-first-label">Minutes:<input id="warningMinutes" class="number-box" type="number" name="warningMinutes" value="15" max="59" min="0"></label>
 						</secion>
 						<br><br><br><br>
@@ -34,6 +34,7 @@
 				<script src="pt/presentaion-timer.js"></script>
 			</div>
 		</div>
+		<button id="demoButton" onclick="beginDemo()">Demo</button>
 		<button id="backButton" onclick="reload()">Back</button>
 	</body>
 </html>

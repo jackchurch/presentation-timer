@@ -7,16 +7,19 @@ function validateForm()
 	var	warningMinutes = parseInt(document.getElementById("warningMinutes").value) || 0;
 	var	warningHours = parseInt(document.getElementById("warningHours").value) || 0;
 	var warningCheckBox = document.getElementById("warningCheckBox");
+	var	backButton = document.getElementById("backButton");
+	var demoButton = document.getElementById("demoButton");
 	var	runTimeTotal = runTimeHours * 60 + runTimeMinutes;
 	var	warningTimeTotal = warningHours * 60 + warningMinutes;
 	var warningRequired = true;
 	if (warningCheckBox.checked == false || warningTimeTotal >= runTimeTotal)
 		warningRequired = false;
 	inputDiv.style.display = "none";
+	backButton.style.display = "block";
+	demoButton.style.display = "none";
 	beginTimer(body, runTimeTotal, warningTimeTotal, warningRequired);
 	return (false);
 }
-
 
 function	beginTimer(body, runTimeTotal, warningTimeTotal, warningRequired)
 {
@@ -46,6 +49,8 @@ function	setColours(runTimeTotal, countdownText, body, warningTimeTotal, warning
 		countdownText.style.color = "red";
 		body.style.backgroundColor = "#505050";
 		body.style.color = "black";
+		backButton.style.backgroundColor = "#505050"
+		backButton.style.color = "red";
 	}
 	else if (runTimeTotal <= warningTimeTotal && warningRequired == true)
 	{
@@ -75,9 +80,47 @@ function	showHideWarningInputs()
 	{
 		sectionToHide.style.display = "none";
 	}
+
 }
 
 function	reload()
 {
 	location.reload();
+}
+
+function	beginDemo()
+{
+	var	body = document.getElementById("body");
+	var	inputDiv = document.getElementById("divToDisappear");
+	var	backButton = document.getElementById("backButton");
+	var demoButton = document.getElementById("demoButton");
+	var	runTimeTotal = 61;
+	var	warningTimeTotal = 15;
+	var warningRequired = true;
+	inputDiv.style.display = "none";
+	backButton.style.display = "block";
+	demoButton.style.display = "none";
+	beginDemoTimer(body, runTimeTotal, warningTimeTotal, warningRequired);
+	return (false);
+}
+
+function	beginDemoTimer(body, runTimeTotal, warningTimeTotal, warningRequired)
+{
+	var	displayTime = 0;
+	var	displayMinutes = 0;
+	var	displayHours = 0;
+	var	countdownText = document.getElementById("countdownText");
+
+	displayTime = runTimeTotal;
+	if (displayTime < 0) {
+		displayTime = displayTime * -1;
+	}
+	displayHours = (Math.floor(displayTime / 60));
+	displayMinutes = displayTime % 60;
+	setColours(runTimeTotal, countdownText, body, warningTimeTotal, warningRequired);
+	displayHours = correctNumber(displayHours);
+	displayMinutes = correctNumber(displayMinutes);
+	countdownText.innerHTML = (displayHours + " : " + displayMinutes);
+	runTimeTotal--;
+	setTimeout(beginDemoTimer, 300, body, runTimeTotal, warningTimeTotal, warningRequired);
 }
